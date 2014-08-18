@@ -1,0 +1,20 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        /:title
+
+# Server
+source:           src/site
+destination:      _gh_pages
+host:             0.0.0.0
+port:             9005
+baseurl:          /
+encoding:         UTF-8
+
+
+# Custom vars
+current_version:  2.3.1
+repo: https://github.com/underlost/dataplay/
+site: http://alifewellplayed.com/

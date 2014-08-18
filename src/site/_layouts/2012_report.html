@@ -1,0 +1,271 @@
+---
+layout: nil
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Tyler Rilling" />
+   <link href="/atom.xml" rel="alternate" title="DataPlay" type="application/atom+xml" />
+   <link rel="stylesheet" href="/dist/css/dataplay.min.css" type="text/css" media="screen, projection" />
+
+   <script type="text/javascript" src="//use.typekit.net/wkh8smn.js"></script>
+   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   <script src="/vendor/js/Chart.min.js" type="text/javascript"></script>
+   <script src="/dist/js/dataplay.min.js" type="text/javascript"></script>
+
+   <!-- Google Analytics -->
+   <script type="text/javascript">
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-30583107-1']);
+     _gaq.push(['_setDomainName', 'blog.jadedgamer.com']);
+     _gaq.push(['_setAllowLinker', true]);
+     _gaq.push(['_trackPageview']);
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+   <!-- Google Analytics end -->
+</head>
+<body class="stats-2012">
+
+    {% include header.html %}
+
+<div class="site container">
+
+<div id="charts">
+<div class="jumbotron">
+    <h1>The 2012 Annual <br />Video Game Report</h1>
+    <p>Presented by A Life Well Played</p>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+            <h2 class="head">Game Releases by Month</h2>
+			<canvas id="releases-overall" height="450" width="960"></canvas>
+			<p class="layout-single-column">Nothing too surprising when we look at the number of new titles released month by month. You can see the summer slump of <strong>July</strong> holding the least amount of new titles with only <strong>76</strong> titles, and <strong>October</strong> seeing the most with <strong>188</strong>. While that may sound like a lot, keep in mind we track numerous sources such as Ninteno Eshop, Steam Early access and various downloadable games are being tracked. App store games are not tracked, unless they're popular enough and have their sales reported. In short, if a game is released and can be purchased, it's most likely included in that month. All data is for the US region only.</p>
+		</div>
+	</div>
+</div><!-- /.row -->
+<hr />
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+			<h2 class="head">New Releases, Sorted by Console</h2>
+			<canvas id="release-by-console" height="450" width="960"></canvas>
+
+			<div class="yearly-legend chart-legend">
+				<span class="legend-color wii">Wii</span>
+				<span class="legend-color xbox360">Xbox 360</span>
+				<span class="legend-color ps3">Playstation 3</span>
+			</div>
+
+			<p class="layout-single-column">When we break releases down by consoles (Xbox 360, Playstation 3, Wii), the trend changes slightly. Suddenly December is the month with fewest titles, and March becomes the second highest month. Wii releases were so few for 2012, I considered not even including it. But on the other hand, I thought it was interesting to see just how few games came out. Diminishing sales of the Wii console and the upcoming Wii-U release most likely lead to the small amount of games released for 2012.</p>
+		</div>
+	</div>
+</div><!-- /.row -->
+<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+		<h2 class="head">Who Published the Most Games?</h2>
+			<div id="publisher-list">
+				<div class="line1"><span class="title">Microsoft Studios<span class="numbers">59</span></span></div>
+				<div class="line2"><span class="title">Namco Bandai<span class="numbers">49</span></span></div>
+				<div class="line3"><span class="title">Sony America<span class="numbers">39</span></span></div>
+				<div class="line4"><span class="title">Nintendo<span class="numbers">39</span></span></div>
+				<div class="line5"><span class="title">Sega<span class="numbers">34</span></span></div>
+				<div class="line6"><span class="title">Ubisoft<span class="numbers">28</span></span></div>
+				<div class="line7"><span class="title">Activision<span class="numbers">23</span></span></div>
+				<div class="line8"><span class="title">Square Enix<span class="numbers">22</span></span></div>
+				<div class="line9"><span class="title">Capcom<span class="numbers">22</span></span></div>
+				<div class="line10"><span class="title">Sony Europe<span class="numbers">22</span></span></div>
+			</div>
+
+			<p class="layout-single-column">Even though the Wii saw few titles for 2012, Nintendo still remains tied with Sony America as the 3rd largest publisher in the world. Whats most overlooked however is just how big of a publisher Micrsofot is. Between the Xbox, Windows 8, and Windows mobile games, they published over <strong>59</strong> titles.</p>
+		</div>
+	</div>
+</div>
+<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+			<h2 class="head">Sales (In Millions) Over the Past 7 Years</h2>
+			<canvas id="hardware-sales-multiple" height="450" width="960"></canvas>
+
+			<div class="yearly-legend chart-legend">
+				<span class="legend-color wii">Wii</span>
+				<span class="legend-color xbox360">Xbox 360</span>
+				<span class="legend-color ps3">Playstation 3</span>
+			</div>
+
+			<p class="layout-single-column">This generation of consoles kicked off in 2005 with the release of the Xbox 350. While the Playstation 3 started out slow because of it's price tag, byt 2009 it caught up to the 360. Both remain to have steady sales well into 2013. The Wii on the other hand peaked in 2008 with a whopping 24.18 million units sold, only to fall year after year. Despite it's decline, the Wii still had a total of <strong>98.6 million</strong> units sold overall, compared to the Xbox 360's <strong>74.8 million</strong>, and Playstation 3's <strong>73.8 million</strong>.</p>
+		</div>
+	</div>
+</div><!-- /.row -->
+<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+
+			<h2 class="head">Global Hardware Sales (In Millions)</h2>
+			<canvas id="hardware-sales" height="450" width="940"></canvas>
+			<p class="layout-single-column">While Nintendo's home consoles arent doing as well as well as the PS3 or 360, they make up for it in hand held sales. Even though analaysts were unsure of the fate of hand held consoles being replaced by the smart phone, the 3DS shows there is still room in the hand held marlet with <strong>14.41 million</strong> units sold world wide. That's almost 2 million more than the Playstation 3 at <strong>12.73 million</strong>.</p>
+
+		</div>
+	</div>
+</div><!-- /.row -->
+<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="field-wrapper">
+			<h2 class="head">Regional Hardware Sales Figures (In Millions)</h2>
+
+
+			<div class="tab-content">
+
+			  <div class="tab-pane fade in active" id="RegionUSA">
+			  	<canvas id="hardware-sales-usa" height="450" width="940"></canvas>
+			  </div>
+
+			  <div class="tab-pane fade in" id="RegionEurope">
+			  	<canvas id="hardware-sales-eu" height="450" width="940"></canvas>
+			  </div>
+
+			  <div class="tab-pane fade in" id="RegionJapan">
+			  	<canvas id="hardware-sales-jap" height="450" width="940"></canvas>
+			  </div>
+			</div>
+
+			<ul class="nav nav-pills" id="regionTabs">
+			  <li class="active"><a href="#RegionUSA" data-toggle="pill">USA</a></li>
+			  <li><a href="#RegionEurope" data-toggle="pill">Europe</a></li>
+			  <li><a href="#RegionJapan" data-toggle="pill">Japan</a></li>
+			</ul>
+
+			<p class="layout-single-column">When we break down sales by region, something intresting shows up. In each region, a different console sold the best. In the US, The Xbox 360 clearly sold the best at <strong>6.32 million</strong>. Wwhen we look at Europe however, the PS3 is the winner with <strong>5.42 million</strong>. Meanwhile in Japan, the 3DS takes the lead with <strong>5.49 million</strong> units.</p>
+
+		</div>
+	</div>
+</div><!-- /.row -->
+<hr />
+
+<div class="row">
+	<div class="field-wrapper">
+		<h2 class="head">Comparing Hardware Sales by Region</h2>
+		<div class="col-md-3">
+			<h3 class="head">Xbox 360</h3>
+			<canvas id="region-sales-xbox" height="200" width="200"></canvas>
+		</div>
+		<div class="col-md-3">
+			<h3 class="head">Playstation 3</h3>
+			<canvas id="region-sales-ps3" height="200" width="200"></canvas>
+		</div>
+		<div class="col-md-3">
+			<h3 class="head">Wii</h3>
+			<canvas id="region-sales-wii" height="200" width="200"></canvas>
+		</div>
+
+		<div class="col-md-3">
+			<h3  class="head">Wii-U</h3>
+			<canvas id="region-sales-wii-u" height="200" width="200"></canvas>
+		</div>
+
+		<div class="col-md-3">
+			<h3  class="head">PSP</h3>
+			<canvas id="region-sales-psp" height="200" width="200"></canvas>
+		</div>
+
+		<div class="col-md-3">
+			<h3  class="head">Vita</h3>
+			<canvas id="region-sales-vita" height="200" width="200"></canvas>
+		</div>
+
+		<div class="col-md-3">
+			<h3  class="head">3DS</h3>
+			<canvas id="region-sales-3ds" height="200" width="200"></canvas>
+		</div>
+
+		<div class="col-md-3">
+			<h3  class="head">DS</h3>
+			<canvas id="region-sales-ds" height="200" width="200"></canvas>
+		</div>
+
+		<div class="region-legend chart-legend">
+			<span class="legend-color usa">USA</span>
+			<span class="legend-color europe">Europe</span>
+			<span class="legend-color japan">Japan</span>
+		</div>
+
+		<div class="col-md-12">
+			<p class="layout-single-column">Similar to the last chart, but this time we can compare the sales for each console for every region. For example, despite the fact the Vita came out in Japan months before the US, it still sold better in the US regions. Not surprisingly however, is the fact the Xbox 360 continues to dominaite in the US, while being almost non-existant in Japan. Another trend also becomes clear; Not only the 360, but all consoles are a lot lower in Japan compared to other regions all across the board. One possible expanation could be the rise of mobile gaminh as smart phones become more prevalent in the region.</p>
+		</div>
+
+	</div>
+</div><!-- /.row -->
+
+<hr />
+
+
+<div class="row">
+	<div class="field-wrapper">
+	<h2 class="head">Popular Trends</h2>
+
+		<div class="row">
+			<div class="col-md-8">
+				<canvas id="theme-trends" height="525" width="525"></canvas>
+
+				<div class="trends-legend chart-legend">
+					<span class="legend-color pc">PC</span>
+					<span class="legend-color xbox360">Xbox 360</span>
+					<span class="legend-color ps3">Playstation 3</span>
+				</div>
+			</div>
+
+			<div class="col-md-4 alignLeft">
+				<h3  class="head">Themes</h3>
+				<p>Popular themes of 2012 is mostly what I expected. The majority of games released on PC, Playstation 3 and Xbox 360 were fantasy and scifi. The Playstation had a surprising amount of anime themed games. Xbox 30 lead in military titles. One thing to keep in mind when looking at this chart, games ca have more then one theme, so it's somewhat hard to come up with exact numbers, therefore percentages are used. For example, a game can have fantasy elements, yet still be a anime game. A game could be militaristic, but also have SciFi elements to it as well.</p>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-md-4 alignLeft">
+				<h3  class="head">Genres</h3>
+				<p>Nothing too surprising with the genres for 2012. The amount of shooters on all platforms were nearly identical. The PC continues to be the platform of choice for sim games, while sports and fighting games continue to ship mostly to consoles. The only real surprise to me was the amount of RPGS that came out on PC compared to consoles. Again, just as themes, genres can overlap. Games like Diablo III can be considered both an Action and RPG game.</p>
+			</div>
+
+			<div class="col-md-8">
+				<canvas id="genre-trends" height="525" width="525"></canvas>
+
+				<div class="trends-legend chart-legend">
+					<span class="legend-color pc">PC</span>
+					<span class="legend-color xbox360">Xbox 360</span>
+					<span class="legend-color ps3">Playstation 3</span>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div><!-- /.row -->
+<hr />
+</div>
+<script src="/data/2012_data.js" type="text/javascript"></script>
+
+<footer class="footer">
+    <p>DataPlay, copyright &copy; 2014 <a href="http://alifewellplayed.com/">A Life Well Played</a>.</p>
+</footer>
+
+</div>
+</body>
+</html>

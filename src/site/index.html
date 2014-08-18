@@ -1,0 +1,42 @@
+---
+layout: default
+title: DayaPlay.
+---
+
+<div class="blog-lead">
+
+    <div class="container">
+        <div class="jumbotron">
+            <p class="layout-single-column">A collection of somewhat pointless,
+                but fun and interesting video games stats and other useless things.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="home">
+
+    <nav id="site-nav" class="layout-single-column">
+        <ul class="list-inline">
+            <li><a href="/">Latest</a></li>
+            <li><a href="/introduction/">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="layout-single-column">
+        <ul class="list-unstyled river-posts">
+            {% for post in site.posts %}
+            <li class="river-post post-item">
+                <h3 class="post-item-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                <a class="post-item-snippet" href="{{ post.url }}">
+                    <p>{{ post.snippet }}</p>
+                </a>
+                <span class="post-meta">
+                    <span class="post-item-meta">{{ post.date | date: "%A, %B %e %Y" }}</span>
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>

@@ -1,8 +1,8 @@
 {
-  "name": "DataPlay",
+  "name": "UnderTasker",
   "slug": "dataplay",
-  "version": "0.1.5",
-  "description": "The DataPlay website.",
+  "version": "0.9.0",
+  "description": "Helping you bootstrap your web site/app using a Grunt & Node.js stack",
   "main": "Gruntfile.js",
   "private": true,
   "scripts": {
@@ -37,16 +37,19 @@
     "markdown": "~0.5.0",
     "time-grunt": "~0.4.0",
     "grunt-git-deploy": "~0.1.1",
-    "grunt-contrib-imagemin": "~0.6.1"
+    "grunt-contrib-imagemin": "~0.8.0",
+    "coffee-script": "",
+    "grunt-contrib-coffee": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/underlost/dataplay.git"
+    "url": "https://github.com/underlost/dataplay.git",
+    "ssh": "git@github.com:underlost/dataplay.git"
   },
   "author": "Tyler Rilling (http://underlost.net/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/underlost/dataplay/issues"
   },
-  "homepage": "http://data.alifewellplayed.com"
+  "homepage": "http://dataplay.alifewellplayed.com"
 }

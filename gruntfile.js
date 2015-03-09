@@ -87,7 +87,20 @@ module.exports = function (grunt) {
         stripBanners: false
       },
       undertask: {
-        src: [ 'source/js/lib/*.js', 'source/js/*.js'],
+        src: [
+            'source/js/lib/*.js',
+            'source/js/transition.js',
+            'source/js/alert.js',
+            'source/js/button.js',
+            'source/js/carousel.js',
+            'source/js/collapse.js',
+            'source/js/dropdown.js',
+            'source/js/modal.js',
+            'source/js/tooltip.js',
+            'source/js/popover.js',
+            'source/js/scrollspy.js',
+            'source/js/tab.js',
+            'source/js/affix.js'],
         dest: 'dist/js/<%= pkg.slug %>.js'
       }
     },

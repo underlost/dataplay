@@ -37,8 +37,8 @@
 						data : [1, 3, 3, 2, 2, 7, 3, 2, 8, 12, 9, 1]
 					},
 				]
-				
-				
+
+
 
 			}
 		//Hardware sales
@@ -54,7 +54,7 @@
 				]
 
 			}
-		
+
 		//Hardware sales USA
 				var barChartDataUSA = {
 				labels : ["PS3","X360","Wii","Wii-U","DS","3DS","PSP","Vita"],
@@ -66,10 +66,10 @@
 						data : [3.48, 6.32, 2.04, 0.93, 1.90, 3.69, .27, 1.17]
 					},
 				]
-	
+
 			}
-		
-		
+
+
 		//Hardware sales JAPAN
 				var barChartDataJAP = {
 				labels : ["PS3","X360","Wii","Wii-U","DS","3DS","PSP","Vita"],
@@ -81,10 +81,10 @@
 						data : [1.23, .07, .47, .63, .06, 5.49, .88, .67, ]
 					},
 				]
-	
+
 			}
-	
-		
+
+
 		//Hardware sales EUROPE
 				var barChartDataEU = {
 				labels : ["PS3","X360","Wii","Wii-U","DS","3DS","PSP","Vita"],
@@ -96,9 +96,9 @@
 						data : [5.42, 3.31, 2.04, .45, .66, 3.99, 1.72, 1.44]
 					},
 				]
-	
+
 			}
-		
+
 		//hardware sales 2
 			var lineChartData = {
 					labels : ["2005", "2006","2007","2008","2009","2010","2011","2012"],
@@ -107,29 +107,35 @@
 						{
 							fillColor : "rgba(242,109,84,0.8)",
 							strokeColor : "rgba(242,109,84,1)",
-							pointColor : "rgba(242,109,84,0)",
+							pointColor : "rgba(242,109,84,1)",
 							pointStrokeColor : "rgba(220,220,220,0)",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(242,109,84,0.8)",
 							data : [0, 2.95, 16.55, 24.18, 21.29, 17.32, 11.52, 5.24]
 						},
 						//ps3
 						{
 							fillColor : "rgba(176,228,227,0.8)",
 							strokeColor : "rgba(176,228,227,1)",
-							pointColor : "rgba(176,228,227,0)",
+							pointColor : "rgba(176,228,227,1)",
 							pointStrokeColor : "rgba(220,220,220,0)",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(176,228,227,0.8)",
 							data : [0, 1.25, 7.9, 10.2, 12.99, 13.89, 14.7, 12.7]
 						},
 						//360
 						{
 							fillColor : "rgba(216,221,140,0.8)",
 							strokeColor : "rgba(216,221,140,1)",
-							pointColor : "rgba(216,221,140,0)",
+							pointColor : "rgba(216,221,140,1)",
 							pointStrokeColor : "rgba(220,220,220,0)",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(216,221,140,0.8)",
 							data : [1.17, 6.8, 7.88, 10.91, 10.16, 13.25, 13.8, 11.9]
 						}
 					]
-		
-				}	       		
+
+				}
 		//Themes
 		var radarChartData = {
 				labels : ["Fantasy","Sci-Fi","Horror","Motorsports","Military","Comedy","Anime"],
@@ -159,9 +165,9 @@
 						data : [24.8, 21.7, 8.9, 5.1, 12.1, 12.1, 15.3]
 					},
 				]
-	
+
 			}
-	
+
 	//Genres
 	var radarChartData2 = {
 				labels : ["RPG","Fighting","Action","Sports","Driving","Shooter","Simulation"],
@@ -191,9 +197,9 @@
 						data : [14.2, 11.3, 28.4, 15.6, 7.8, 13.4, 9.2]
 					},
 				]
-	
+
 			}
-	
+
 	//xbox region sales
 	var doughnutDataX360 = [
 					//usa
@@ -211,7 +217,7 @@
 						value : 71927,
 						color:"#fbda77"
 					}
-	
+
 				];
 	//ps3
 	var doughnutDataPS3 = [
@@ -230,7 +236,7 @@
 						value : 1233261,
 						color:"#fbda77"
 					}
-	
+
 				];
 	//wii
 	var doughnutDataWii = [
@@ -249,7 +255,7 @@
 						value : 470125,
 						color:"#fbda77"
 					}
-	
+
 				];
 	//wii-u
 	var doughnutDataWiiU = [
@@ -268,8 +274,8 @@
 						value : 633377,
 						color:"#fbda77"
 					}
-	
-				];			
+
+				];
 	//PSP
 	var doughnutDataPSP = [
 					//usa
@@ -287,7 +293,7 @@
 						value : 880718,
 						color:"#fbda77"
 					}
-	
+
 				];
 	//Vita
 	var doughnutDataVita = [
@@ -306,8 +312,8 @@
 						value : 670772,
 						color:"#fbda77"
 					}
-	
-				];			
+
+				];
 	//DS
 	var doughnutDataDS = [
 					//usa
@@ -325,7 +331,7 @@
 						value : 66160,
 						color:"#fbda77"
 					}
-	
+
 				];
 	//3ds
 	var doughnutData3DS = [
@@ -344,33 +350,33 @@
 						value : 5494390,
 						color:"#fbda77"
 					}
-	
-				];			
+
+				];
 	var bar1 = new Chart(document.getElementById("releases-overall").getContext("2d")).Bar(barChartData, {
 	    scaleOverride : true,
 	    scaleSteps : 20,
 	    scaleStepWidth :10,
 	    scaleStartValue : 0,
 	});
-	
+
 	var bar2 = new Chart(document.getElementById("release-by-console").getContext("2d")).Bar(barChartData2, {
-	
+
 		scaleOverride : true,
 		scaleSteps : 18,
 		scaleStepWidth :2,
 		scaleStartValue : 0,
 	});
-	
-	
+
+
 	var Line1 = new Chart(document.getElementById("hardware-sales-multiple").getContext("2d")).Line(lineChartData);
-	
+
 	var bar3 = new Chart(document.getElementById("hardware-sales").getContext("2d")).Bar(barChartData3, {
 		scaleOverride : true,
 		scaleSteps : 25,
 		scaleStepWidth :.625,
 		scaleStartValue : 0,
 	});
-	
+
 	var bar4 = new Chart(document.getElementById("hardware-sales-usa").getContext("2d")).Bar(barChartDataUSA, {
 		scaleOverride : true,
 		scaleSteps : 28,
@@ -389,9 +395,9 @@
 		scaleStepWidth :.25,
 		scaleStartValue : 0,
 	});
-	
-	
-	var myRadar1 = new Chart(document.getElementById("theme-trends").getContext("2d")).Radar(radarChartData,{ 
+
+
+	var myRadar1 = new Chart(document.getElementById("theme-trends").getContext("2d")).Radar(radarChartData,{
 		scaleShowLabels : false,
 		pointLabelFontSize : 10,
 	});
@@ -405,7 +411,7 @@
 	var myDoughnut2 = new Chart(document.getElementById("region-sales-ps3").getContext("2d")).Doughnut(doughnutDataPS3, {
 		segmentStrokeColor : "#f5f5f5",
 	});
-	
+
 	var myDoughnut3 = new Chart(document.getElementById("region-sales-wii").getContext("2d")).Doughnut(doughnutDataWii, {
 		segmentStrokeColor : "#f5f5f5",
 	});

@@ -1,5 +1,5 @@
 {
-  "name": "UnderTasker",
+  "name": "DataPlay",
   "slug": "dataplay",
   "version": "0.9.0",
   "description": "Helping you bootstrap your web site/app using a Grunt & Node.js stack",
@@ -51,5 +51,5 @@
   "bugs": {
     "url": "https://github.com/underlost/dataplay/issues"
   },
-  "homepage": "http://dataplay.alifewellplayed.com"
+  "homepage": "http://data.alifewellplayed.com"
 }

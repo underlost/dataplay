@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DayaPlay.
+title: Archive
 ---
 
 <div class="blog-lead">
@@ -32,7 +32,7 @@ title: DayaPlay.
                     <p>{{ post.snippet }}</p>
                 </a>
                 <span class="post-meta">
-                    <span class="post-item-meta">{{ post.date | date: "%A, %B %e %Y" }}</span>
+                    <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-item-meta sr-only">{{ post.date | date: "%A, %B %e %Y" }}</time>
                 </span>
             </li>
             {% endfor %}

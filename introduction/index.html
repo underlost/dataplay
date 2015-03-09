@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Introduction // DataPlay</title>
+    <meta name="author" content="Tyler Rilling" />
+    <link href="/atom.xml" rel="alternate" title="DataPlay" type="application/atom+xml" />
+
+    <link rel="stylesheet" href="/dist/css/dataplay.min.css" type="text/css" media="screen, projection" />
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/wkh8smn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/vendor/js/highcharts/highcharts.js"></script>
+    <script src="/vendor/js/highcharts/modules/exporting.js"></script>
+    <script src="/dist/js/dataplay.min.js" type="text/javascript"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30583107-1']);
+    _gaq.push(['_setDomainName', 'data.alifewellplayed.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" id="top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">DataPlay.</a>
+        </div><!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse" role="navigation">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://alifewellplayed.com/"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> A Life Well Played</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+
+    <div class="site">
+        <div class="blog-post">
+    <h1 class="post-title">Introduction</h1>
+
+    <div class="post-item">
+        <p>Around the time I started working on <a href="http://jadedgamer.com/">Jaded Gamer</a>, I started working on a little script to scrape various websites relating to video game data. Since then, I’ve slowly expanded on it here and there, collecting more and more data. It’s also now fully integrated it into the website, and acts as a web crawler, also indexing various video game news sites. For the longest time though, I really wasn’t sure what I really wanted to do with all the information I’ve been collecting. Then, I came across the <a href="http://feltron.com/ar07_01.html">The Feltron 2007 Annual Report</a>, a yearly book of beautiful data visualizations. This set off a spark to create something similar, but more web based. The <a href="/2012-report/">2012 Annual Video Game Report</a> is the first result. It’s still a little rough around the edges, but it serves as a starting point.</p>
+
+<h3 id="whats-next">What’s Next</h3>
+
+<p>As I continue to collect and improve the data, I’ll be releasing more updates. I’d especially like to cover more years, produce more annual reports, and explore more gaming trends. With over 40,000 games and thousands of companies, it’s taking a little more time than I anticipated.</p>
+
+<p>I’m also currently looking at options to make all the data publicly available, either in one large data dump, or via a RESTful API.</p>
+
+<h3 id="sources">Sources</h3>
+
+<p>As I mentioned, parts of the scripts are not pretty, but it does the job pretty well. The focus right now is to collect as much information on game titles, publishers, developers, and platforms as I can, as well as sales numbers. I’ve constructed a number of site scrapers/crawlers that comb over sites like <a href="http://giantbomb.com">Giant Bomb</a>, <a href="http://www.vgchartz.com/">VGChartz</a>, and <a href="http://www.mobygames.com/">MobyGames</a>. These seem to be the most accurate sources I’ve come across. The crawlers dump everything into a database, and reports any conflicting data. Then, I manually look it over and clean it up the best I can. Coincidentally, this has also helped me find and report a number of inaccuracies on Giant Bomb.</p>
+
+    </div>
+</div>
+
+
+        <div class="container">
+            <footer class="footer">
+                <p>DataPlay, copyright &copy; 2015, <a href="http://underlost.net">Tyler Rilling</a>, <a href="http://alifewellplayed.com/">A Life Well Played</a>.</p>
+            </footer>
+        </div>
+
+    </div>
+</body>
+</html>
